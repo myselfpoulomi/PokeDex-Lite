@@ -4,8 +4,8 @@ import PokemonDetailModal from "../components/PokemonDetailModal";
 import FavoritesPage from "./FavoritesPage";
 import CustomTypeDropdown from "../customUI/CustomTypeDropdown";
 import Navbar from "../components/Navbar";
-import { getSession, POKEDEX_SESSION_EVENT } from "../utils/session";
-import { getFavoriteIds, setFavoriteIds } from "../utils/favoritesStorage";
+import { getSession, POKEDEX_SESSION_EVENT } from "../../utils/session";
+import { getFavoriteIds, setFavoriteIds } from "../../utils/favoritesStorage";
 import PokemonCardsGrid from "../customUI/PokemonCardsGrid";
 
 export default function PokedexHomePage() {

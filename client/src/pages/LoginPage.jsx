@@ -1,6 +1,6 @@
 import { GoogleLogin } from "@react-oauth/google";
 import { useNavigate } from "react-router-dom";
-import { parseGoogleCredential, setSession } from "../utils/session";
+import { parseGoogleCredential, setSession } from "../../utils/session";
 
 export default function LoginPage() {
   const clientId = import.meta.env.VITE_GOOGLE_CLIENT_ID;

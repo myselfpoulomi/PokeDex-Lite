@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { LogOut, User } from "lucide-react";
-import { clearSession, getSession } from "../utils/session";
+import { clearSession, getSession } from "../../utils/session";
 
 export default function Navbar() {
     const [user, setUser] = useState(() => getSession());
