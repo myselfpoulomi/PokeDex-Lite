@@ -25,7 +25,7 @@ Google sign-in is enabled when `VITE_GOOGLE_CLIENT_ID` is present.
 Create `client/.env`:
 
 ```bash
-VITE_GOOGLE_CLIENT_ID = 445075984961-8vm48olrn6lmokdkcbovvb3vhb4m12e8.apps.googleusercontent.com
+VITE_GOOGLE_CLIENT_ID=your_google_oauth_client_id
 ```
 
 Notes:
