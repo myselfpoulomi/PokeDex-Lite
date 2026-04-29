@@ -64,7 +64,7 @@ export default function PokedexHomePage() {
         }
     };
 
-    // Fetch Pokemon
+   
     useEffect(() => {
         const fetchPokemon = async () => {
             try {
@@ -154,7 +154,7 @@ export default function PokedexHomePage() {
         }
     };
 
-    // Search + Filter + Pagination
+   
     useEffect(() => {
         let filteredPokemon = pokemonList.filter((pokemon) =>
             pokemon.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -175,7 +175,7 @@ export default function PokedexHomePage() {
         );
     }, [pokemonList, currentPage, searchTerm, selectedType]);
 
-    // Total Pages
+
     const filteredPokemon = pokemonList.filter((pokemon) => {
         const matchesSearch = pokemon.name
             .toLowerCase()
@@ -192,7 +192,7 @@ export default function PokedexHomePage() {
         filteredPokemon.length / cardsPerPage
     );
 
-    // Pagination
+    
     const handleNext = () => {
         if (currentPage < totalPages) {
             setCurrentPage((prev) => prev + 1);
@@ -205,7 +205,7 @@ export default function PokedexHomePage() {
         }
     };
 
-    // Loading
+   
     if (loading) {
         return (
             <div className="min-h-screen flex flex-col bg-[#1F1611]">
@@ -217,7 +217,7 @@ export default function PokedexHomePage() {
         );
     }
 
-    // Error
+   
     if (error) {
         return (
             <div className="min-h-screen flex flex-col bg-[#1F1611]">
@@ -259,7 +259,7 @@ export default function PokedexHomePage() {
             <div className="flex-1 px-4 md:px-8 py-8 min-h-0">
                 <div className="max-w-7xl mx-auto">
 
-                    {/* Hero Section */}
+                    
                     <div className="mb-10 rounded-[32px] bg-gradient-to-r from-[#1F1611] via-[#523828] to-[#D4A569] p-8 md:p-12 shadow-2xl">
                         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
                             <div>
@@ -288,11 +288,11 @@ export default function PokedexHomePage() {
                         </div>
                     </div>
 
-                    {/* Search + Filter */}
+                    
                     <div className="bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-[28px] p-4 mb-10 shadow-xl relative overflow-visible z-50">
                         <div className="grid grid-cols-1 md:grid-cols-10 gap-4">
 
-                            {/* Search */}
+                            
                             <input
                                 type="text"
                                 placeholder="Search Pokémon..."
@@ -313,8 +313,7 @@ export default function PokedexHomePage() {
                         </div>
                     </div>
 
-                    {/* Pokemon Cards */}
-                    {/* Pokemon Cards */}
+                   
                     <PokemonCardsGrid
                         displayedPokemon={displayedPokemon}
                         favorites={favorites}
@@ -322,7 +321,7 @@ export default function PokedexHomePage() {
                         fetchPokemonDetails={fetchPokemonDetails}
                     />
 
-                    {/* Pagination */}
+                    
                     <div className="flex justify-center items-center gap-4 mt-12">
 
                         <button

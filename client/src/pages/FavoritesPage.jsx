@@ -16,18 +16,12 @@ export default function FavoritesPage({
     favorites.includes(pokemon.id)
   );
 
-  // const handleViewDetails = async (pokemonName) => {
-  //   const details = await fetchPokemonDetails(pokemonName);
-  //   if (details) {
-  //     setSelectedPokemon(details);
-  //   }
-  // };
+
 
   return (
     <div className="flex-1 bg-[#1F1611] text-white px-4 md:px-8 py-8 min-h-0">
       <div className="max-w-7xl mx-auto">
 
-        {/* Header */}
         <div className="flex items-center justify-between mb-10">
           <h1 className="text-4xl font-bold">
             My Favorites ♡
@@ -41,7 +35,7 @@ export default function FavoritesPage({
           </button>
         </div>
 
-        {/* Empty State */}
+       
         {favoritePokemon.length === 0 ? (
           <div className="text-center text-white/70 text-xl mt-20">
             No favorite Pokémon yet

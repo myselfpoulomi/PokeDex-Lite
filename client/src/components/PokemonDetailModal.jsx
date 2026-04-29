@@ -21,7 +21,7 @@ export default function PokemonDetailModal({
       <div className="fixed inset-0 z-[999] bg-black/70 backdrop-blur-md flex items-center justify-center px-4">
         <div className="relative w-full max-w-3xl h-[82vh] rounded-[24px] border border-white/20 bg-white/5 backdrop-blur-xl shadow-2xl overflow-y-auto">
   
-          {/* Close Button */}
+        
           <button
             onClick={() => setSelectedPokemon(null)}
             className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full border border-white/10 bg-white/10 text-white text-base hover:scale-105 transition"
@@ -29,10 +29,10 @@ export default function PokemonDetailModal({
             ✕
           </button>
   
-          {/* Top Section */}
+         
           <div className="grid md:grid-cols-2 gap-6 p-6 md:p-7">
   
-            {/* Left Side Image */}
+         
             <div className="flex items-center justify-center">
               <img
                 src={selectedPokemon.image}
@@ -41,13 +41,13 @@ export default function PokemonDetailModal({
               />
             </div>
   
-            {/* Right Side Info */}
+            
             <div className="flex flex-col justify-center">
               <p className="text-xs tracking-[3px] uppercase text-white/60 mb-2">
                 #{String(selectedPokemon.id).padStart(4, "0")}
               </p>
   
-              {/* Name + Favorite Heart */}
+              
               <div className="flex justify-between items-start mb-4">
                 <h2 className="text-3xl font-bold text-white">
                   {selectedPokemon.name}
