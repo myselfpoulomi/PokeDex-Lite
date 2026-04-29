@@ -6,8 +6,8 @@ A lightweight Pokédex web app built with **React + Vite**, powered by the publi
 
 ### Prerequisites
 
-- **Node.js** (recommended: current LTS)
-- **npm** (comes with Node)
+- **Node.js**
+- **npm**
 
 ### Install dependencies
 
@@ -28,8 +28,6 @@ Create `client/.env`:
 VITE_GOOGLE_CLIENT_ID=your_google_oauth_client_id
 ```
 
-Notes:
-- Vite only exposes env vars to the browser when they start with `VITE_`.
 - If you skip this env var, the app still runs, but login will show a prompt to configure it.
 
 ### Run the app
@@ -40,14 +38,6 @@ npm run dev
 ```
 
 Vite will print the local dev URL in your terminal (typically `http://localhost:5173`).
-
-### Production build (optional)
-
-```bash
-cd client
-npm run build
-npm run preview
-```
 
 ## Technologies used (and why)
 
@@ -69,8 +59,6 @@ npm run preview
 
 ## Challenges faced (and how they were solved)
 
-- **Vite env vars not available in runtime**: Vite requires the `VITE_` prefix for browser-exposed vars. The app reads `import.meta.env.VITE_GOOGLE_CLIENT_ID` and conditionally enables the Google provider; when missing, the UI falls back gracefully with setup instructions.
-
 - **Keeping favorites in sync across components**: Since session and favorites live in `localStorage`, the app uses a custom `POKEDEX_SESSION_EVENT` and a `ref` to avoid stale-state issues when toggling favorites quickly, keeping UI and storage consistent.
 
 - **Fetching lots of Pokémon details efficiently**: PokéAPI returns a list plus per-Pokémon detail URLs. The app batches detail fetches with `Promise.all` and maintains explicit `loading`/`error` state so the UI stays responsive and failures are handled cleanly.
@@ -81,5 +69,4 @@ From `client/`:
 
 - **`npm run dev`**: Start the development server
 - **`npm run build`**: Create a production build
-- **`npm run preview`**: Preview the production build locally
 - **`npm run lint`**: Run ESLint
